@@ -1009,9 +1009,21 @@ a {
         border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    /* Ensure smooth transitions */
+    /* Ensure smooth transitions with fade and slide effect */
+    .navbar-collapse {
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .navbar-collapse.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
     .navbar-collapse.collapsing {
-        transition: height 0.35s ease;
+        transition: height 0.35s ease, opacity 0.3s ease, transform 0.3s ease;
+        opacity: 0;
     }
 
     /* Keep header sticky and on top */
@@ -1033,11 +1045,47 @@ a {
         gap: 0.5rem !important;
     }
 
-    /* Style dropdown menu for mobile */
+    /* Style dropdown menu for mobile with animation */
     .navbar-nav .dropdown-menu {
         border: none;
         background-color: rgba(0, 0, 0, 0.4);
         margin-top: 0.5rem;
+        animation: dropdownSlideIn 0.3s ease forwards;
+    }
+
+    @keyframes dropdownSlideIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Animate menu items individually */
+    .navbar-collapse.show .navbar-nav .nav-item {
+        animation: menuItemFadeIn 0.4s ease forwards;
+        opacity: 0;
+    }
+
+    .navbar-collapse.show .navbar-nav .nav-item:nth-child(1) { animation-delay: 0.05s; }
+    .navbar-collapse.show .navbar-nav .nav-item:nth-child(2) { animation-delay: 0.1s; }
+    .navbar-collapse.show .navbar-nav .nav-item:nth-child(3) { animation-delay: 0.15s; }
+    .navbar-collapse.show .navbar-nav .nav-item:nth-child(4) { animation-delay: 0.2s; }
+    .navbar-collapse.show .navbar-nav .nav-item:nth-child(5) { animation-delay: 0.25s; }
+    .navbar-collapse.show .navbar-nav .nav-item:nth-child(6) { animation-delay: 0.3s; }
+
+    @keyframes menuItemFadeIn {
+        from {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
 
     /* Ensure nav links are clearly visible */
@@ -1060,5 +1108,12 @@ a {
     .navbar-nav .dropdown-menu .dropdown-item:hover {
         background-color: rgba(255, 255, 255, 0.1);
         color: var(--accent-color);
+    }
+
+    /* Animate social icons in mobile menu */
+    .navbar-collapse.show .social-container {
+        animation: menuItemFadeIn 0.4s ease forwards;
+        animation-delay: 0.35s;
+        opacity: 0;
     }
 }
