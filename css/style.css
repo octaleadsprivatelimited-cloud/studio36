@@ -991,3 +991,51 @@ a {
 @media (max-width: 768px) {
     .bg-attach-fixed { background-attachment: scroll; }
 }
+
+/* Fix mobile menu to prevent body shift and hero section movement */
+@media (max-width: 991.98px) {
+    /* Make navbar collapse absolute to prevent pushing content down */
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--bg-secondary-dark);
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+    }
+
+    /* Ensure smooth transitions */
+    .navbar-collapse.collapsing {
+        transition: height 0.35s ease;
+    }
+
+    /* Keep header sticky and on top */
+    header.sticky-top {
+        position: sticky;
+        top: 0;
+        z-index: 1030;
+    }
+
+    /* Prevent body scroll when menu is open */
+    body.menu-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+    }
+
+    /* Add gap between menu items on mobile */
+    .navbar-nav {
+        gap: 0.5rem !important;
+    }
+
+    /* Style dropdown menu for mobile */
+    .navbar-nav .dropdown-menu {
+        border: none;
+        background-color: rgba(255, 255, 255, 0.05);
+        margin-top: 0.5rem;
+    }
+}
