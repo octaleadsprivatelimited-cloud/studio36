@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Disallow admin or private directories if any
+Disallow: /php/
+Disallow: /DOCUMENTATION/
+
+# Sitemap location
+Sitemap: https://studio36.co/sitemap.xml
+
