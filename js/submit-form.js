@@ -14,12 +14,25 @@ $(function () {
         const successMsgSubscribe = $('.success_msg_subscribe');
 
         form.on('submit', function (event) {
-            event.preventDefault();
-            event.stopPropagation();
-
             if (!form[0].checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+                form.addClass('was-validated');
                 return; // Exit early if the form is not valid
             }
+
+            // For Formspree forms, allow default submission
+            const formAction = form.attr('action');
+            if (formAction && formAction.includes('formspree.io')) {
+                submitForm.html('Sending...');
+                subscribeButton.html('Sending...');
+                // Let the form submit naturally to Formspree
+                return true;
+            }
+
+            // For other forms (PHP), use AJAX
+            event.preventDefault();
+            event.stopPropagation();
 
             submitForm.html('Sending...');
             subscribeButton.html('Sending...');
@@ -55,3 +68,4 @@ $(function () {
         });
     });
 });
+
