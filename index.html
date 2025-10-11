@@ -2,6 +2,32 @@
 <html lang="en" data-bs-theme="dark">
 
 <head>
+    <script>
+    // Define dataLayer and the gtag function.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    // IMPORTANT - DO NOT COPY/PASTE WITHOUT MODIFYING REGION LIST
+    //Set default consent for specific regions according to your requirements
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'regions':['US-CA', 'EU']
+    });
+
+    // Set default consent for all other regions according to your requirements
+    gtag('consent', 'default', {
+      'ad_storage': 'granted',
+      'ad_user_data': 'granted',
+      'ad_personalization': 'granted',
+      'analytics_storage': 'granted'
+    });
+    </script>
+
+    <!--Banner script here!-->
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0G4NQLDJZR"></script>
     <script>
@@ -27,7 +53,6 @@
     <script src="js/swiper-script.js"></script>
     <script src="js/submit-form.js"></script>
     <script src="js/vendor/isotope.pkgd.min.js"></script>
-    <script src="js/video_embedded.js"></script>
     
     <!-- Vercel Analytics -->
     <script>
@@ -116,23 +141,8 @@
                             </p>
                             <div class="d-flex flex-lg-row flex-column gap-lg-5 gap-4">
                                 <a href="" class="btn button font-1 ls-2">LEARN MORE</a>
-                                <div class="d-flex flex-row gap-3 align-items-center">
-                                    <button type="button" class="btn request-loader" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal">
-                                        <i class="fa-solid fa-play ms-1"></i>
-                                    </button>
-                                    <span class="font-1 ls-2 fw-bold">WATCH SHOWREEL</span>
-                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Modal -->
-            <div class="modal fade bg-overlay" id="exampleModal" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-lg">
-                    <div class="modal-content bg-dark-color">
-                        <iframe class="ifr-video" src="https://www.youtube.com/embed/FK2RaJ1EfA8?autoplay=1"></iframe>
                     </div>
                 </div>
             </div>
@@ -174,15 +184,6 @@
                         <div class="col  mb-3">
                             <div class="d-flex flex-column gap-3 h-100">
                                 <div class="position-relative h-100">
-                                    <div class="image-overlay-2"></div>
-                                    <div class="position-absolute start-0 top-0 w-100 h-100" style="z-index: 2;">
-                                        <div class="d-flex justify-content-center align-items-center h-100">
-                                            <button type="button" class="btn request-loader" data-bs-toggle="modal"
-                                                data-bs-target="#modal-1">
-                                                <i class="fa-solid fa-play ms-1"></i>
-                                            </button>
-                                        </div>
-                                    </div>
                                     <img src="image/dummy-img-600x400.jpg" alt="image" class="img-fluid rounded-3">
                                 </div>
                                 <div class="d-flex flex-row gap-5">
@@ -198,27 +199,10 @@
                                 <h5 class="font-1 fw-bold lh-1">Vikram Reddy: How to Live a Life Full of Music | E106
                                 </h5>
                             </div>
-                            <div class="modal fade bg-overlay" id="modal-1" tabindex="-1" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered modal-lg">
-                                    <div class="modal-content bg-dark-color">
-                                        <iframe class="ifr-video"
-                                            src="https://www.youtube.com/embed/FK2RaJ1EfA8?autoplay=1"></iframe>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="col  mb-3">
                             <div class="d-flex flex-column gap-3 h-100">
                                 <div class="position-relative h-100">
-                                    <div class="image-overlay-2"></div>
-                                    <div class="position-absolute start-0 top-0 w-100 h-100" style="z-index: 2;">
-                                        <div class="d-flex justify-content-center align-items-center h-100">
-                                            <button type="button" class="btn request-loader" data-bs-toggle="modal"
-                                                data-bs-target="#modal-2">
-                                                <i class="fa-solid fa-play ms-1"></i>
-                                            </button>
-                                        </div>
-                                    </div>
                                     <img src="image/dummy-img-600x400.jpg" alt="image" class="img-fluid rounded-3">
                                 </div>
                                 <div class="d-flex flex-row gap-5">
@@ -234,27 +218,10 @@
                                 <h5 class="font-1 fw-bold lh-1">Vikram Reddy: How to Live a Life Full of Music | E107
                                 </h5>
                             </div>
-                            <div class="modal fade bg-overlay" id="modal-2" tabindex="-1" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered modal-lg">
-                                    <div class="modal-content bg-dark-color">
-                                        <iframe class="ifr-video"
-                                            src="https://www.youtube.com/embed/FK2RaJ1EfA8?autoplay=1"></iframe>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="col  mb-3">
                             <div class="d-flex flex-column gap-3 h-100">
                                 <div class="position-relative h-100">
-                                    <div class="image-overlay-2"></div>
-                                    <div class="position-absolute start-0 top-0 w-100 h-100" style="z-index: 2;">
-                                        <div class="d-flex justify-content-center align-items-center h-100">
-                                            <button type="button" class="btn request-loader" data-bs-toggle="modal"
-                                                data-bs-target="#modal-3">
-                                                <i class="fa-solid fa-play ms-1"></i>
-                                            </button>
-                                        </div>
-                                    </div>
                                     <img src="image/dummy-img-600x400.jpg" alt="image" class="img-fluid rounded-3">
                                 </div>
                                 <div class="d-flex flex-row gap-5">
@@ -269,14 +236,6 @@
                                 </div>
                                 <h5 class="font-1 fw-bold lh-1">Vikram Reddy: How to Live a Life Full of Music | E108
                                 </h5>
-                            </div>
-                            <div class="modal fade bg-overlay" id="modal-3" tabindex="-1" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered modal-lg">
-                                    <div class="modal-content bg-dark-color">
-                                        <iframe class="ifr-video"
-                                            src="https://www.youtube.com/embed/FK2RaJ1EfA8?autoplay=1"></iframe>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -323,24 +282,7 @@
                                 </div>
                             </div>
                             <div class="position-relative me-5">
-                                <div class="image-overlay-2 rounded-4"></div>
-                                <div class="position-absolute start-0 top-0 w-100 h-100" style="z-index: 2;">
-                                    <div class="d-flex justify-content-center align-items-center h-100">
-                                        <button type="button" class="btn request-loader" data-bs-toggle="modal"
-                                            data-bs-target="#modal-about">
-                                            <i class="fa-solid fa-play ms-1"></i>
-                                        </button>
-                                    </div>
-                                </div>
                                 <img src="image/dummy-img-600x700.jpg" alt="image" class="img-fluid w-100 rounded-4">
-                            </div>
-                        </div>
-                        <div class="modal fade bg-overlay" id="modal-about" tabindex="-1" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered modal-lg">
-                                <div class="modal-content bg-dark-color">
-                                    <iframe class="ifr-video"
-                                        src="https://www.youtube.com/embed/FK2RaJ1EfA8?autoplay=1"></iframe>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -565,15 +507,6 @@
                         <div class="col mb-4">
                             <div class="d-flex flex-column gap-3 h-100">
                                 <div class="position-relative h-100">
-                                    <div class="overlay rounded-3"></div>
-                                    <div class="position-absolute start-0 top-0 w-100 h-100" style="z-index: 2;">
-                                        <div class="d-flex justify-content-center align-items-center h-100">
-                                            <button type="button" class="btn request-loader" data-bs-toggle="modal"
-                                                data-bs-target="#e119">
-                                                <i class="fa-solid fa-play ms-1"></i>
-                                            </button>
-                                        </div>
-                                    </div>
                                     <img src="image/dummy-img-600x500.jpg" alt="image" class="img-fluid rounded-3">
                                     <div class="position-absolute bottom-0 start-0 w-100 d-flex flex-column px-4 py-3">
                                         <h5 class="font-1 fw-bold lh-1">Meera Nair: How to Live a Life Full of Comedy |
@@ -592,27 +525,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal fade bg-overlay" id="e119" tabindex="-1" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered modal-lg">
-                                    <div class="modal-content bg-dark-color">
-                                        <iframe class="ifr-video"
-                                            src="https://www.youtube.com/embed/FK2RaJ1EfA8?autoplay=1"></iframe>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="col mb-4">
                             <div class="d-flex flex-column gap-3 h-100">
                                 <div class="position-relative h-100">
-                                    <div class="overlay rounded-3"></div>
-                                    <div class="position-absolute start-0 top-0 w-100 h-100" style="z-index: 2;">
-                                        <div class="d-flex justify-content-center align-items-center h-100">
-                                            <button type="button" class="btn request-loader" data-bs-toggle="modal"
-                                                data-bs-target="#e118">
-                                                <i class="fa-solid fa-play ms-1"></i>
-                                            </button>
-                                        </div>
-                                    </div>
                                     <img src="image/dummy-img-600x500.jpg" alt="image" class="img-fluid rounded-3">
                                     <div class="position-absolute bottom-0 start-0 w-100 d-flex flex-column px-4 py-3">
                                         <h5 class="font-1 fw-bold lh-1">Karan Malhotra: I Like The Way I Compose Songs |
@@ -631,27 +547,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal fade bg-overlay" id="e118" tabindex="-1" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered modal-lg">
-                                    <div class="modal-content bg-dark-color">
-                                        <iframe class="ifr-video"
-                                            src="https://www.youtube.com/embed/FK2RaJ1EfA8?autoplay=1"></iframe>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="col mb-4">
                             <div class="d-flex flex-column gap-3 h-100">
                                 <div class="position-relative h-100">
-                                    <div class="overlay rounded-3"></div>
-                                    <div class="position-absolute start-0 top-0 w-100 h-100" style="z-index: 2;">
-                                        <div class="d-flex justify-content-center align-items-center h-100">
-                                            <button type="button" class="btn request-loader" data-bs-toggle="modal"
-                                                data-bs-target="#e117">
-                                                <i class="fa-solid fa-play ms-1"></i>
-                                            </button>
-                                        </div>
-                                    </div>
                                     <img src="image/dummy-img-600x500.jpg" alt="image" class="img-fluid rounded-3">
                                     <div class="position-absolute bottom-0 start-0 w-100 d-flex flex-column px-4 py-3">
                                         <h5 class="font-1 fw-bold lh-1">Ishita Roy: What if we Live Without Music? |
@@ -670,27 +569,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal fade bg-overlay" id="e117" tabindex="-1" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered modal-lg">
-                                    <div class="modal-content bg-dark-color">
-                                        <iframe class="ifr-video"
-                                            src="https://www.youtube.com/embed/FK2RaJ1EfA8?autoplay=1"></iframe>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="col mb-4">
                             <div class="d-flex flex-column gap-3 h-100">
                                 <div class="position-relative h-100">
-                                    <div class="overlay rounded-3"></div>
-                                    <div class="position-absolute start-0 top-0 w-100 h-100" style="z-index: 2;">
-                                        <div class="d-flex justify-content-center align-items-center h-100">
-                                            <button type="button" class="btn request-loader" data-bs-toggle="modal"
-                                                data-bs-target="#e116">
-                                                <i class="fa-solid fa-play ms-1"></i>
-                                            </button>
-                                        </div>
-                                    </div>
                                     <img src="image/dummy-img-600x500.jpg" alt="image" class="img-fluid rounded-3">
                                     <div class="position-absolute bottom-0 start-0 w-100 d-flex flex-column px-4 py-3">
                                         <h5 class="font-1 fw-bold lh-1">Exclusive: Full of Fun and Emotion | E116
@@ -708,27 +590,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal fade bg-overlay" id="e116" tabindex="-1" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered modal-lg">
-                                    <div class="modal-content bg-dark-color">
-                                        <iframe class="ifr-video"
-                                            src="https://www.youtube.com/embed/FK2RaJ1EfA8?autoplay=1"></iframe>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="col mb-4">
                             <div class="d-flex flex-column gap-3 h-100">
                                 <div class="position-relative h-100">
-                                    <div class="overlay rounded-3"></div>
-                                    <div class="position-absolute start-0 top-0 w-100 h-100" style="z-index: 2;">
-                                        <div class="d-flex justify-content-center align-items-center h-100">
-                                            <button type="button" class="btn request-loader" data-bs-toggle="modal"
-                                                data-bs-target="#e115">
-                                                <i class="fa-solid fa-play ms-1"></i>
-                                            </button>
-                                        </div>
-                                    </div>
                                     <img src="image/dummy-img-600x500.jpg" alt="image" class="img-fluid rounded-3">
                                     <div class="position-absolute bottom-0 start-0 w-100 d-flex flex-column px-4 py-3">
                                         <h5 class="font-1 fw-bold lh-1">Exclusive: Know More About Our Podcast Team|
@@ -747,27 +612,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal fade bg-overlay" id="e115" tabindex="-1" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered modal-lg">
-                                    <div class="modal-content bg-dark-color">
-                                        <iframe class="ifr-video"
-                                            src="https://www.youtube.com/embed/FK2RaJ1EfA8?autoplay=1"></iframe>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="col mb-4">
                             <div class="d-flex flex-column gap-3 h-100">
                                 <div class="position-relative h-100">
-                                    <div class="overlay rounded-3"></div>
-                                    <div class="position-absolute start-0 top-0 w-100 h-100" style="z-index: 2;">
-                                        <div class="d-flex justify-content-center align-items-center h-100">
-                                            <button type="button" class="btn request-loader" data-bs-toggle="modal"
-                                                data-bs-target="#e114">
-                                                <i class="fa-solid fa-play ms-1"></i>
-                                            </button>
-                                        </div>
-                                    </div>
                                     <img src="image/dummy-img-600x500.jpg" alt="image" class="img-fluid rounded-3">
                                     <div class="position-absolute bottom-0 start-0 w-100 d-flex flex-column px-4 py-3">
                                         <h5 class="font-1 fw-bold lh-1">Talk About Today's Music Community | E114
@@ -782,14 +630,6 @@
                                                 13 October 2023
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal fade bg-overlay" id="e114" tabindex="-1" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered modal-lg">
-                                    <div class="modal-content bg-dark-color">
-                                        <iframe class="ifr-video"
-                                            src="https://www.youtube.com/embed/FK2RaJ1EfA8?autoplay=1"></iframe>
                                     </div>
                                 </div>
                             </div>
